@@ -3,7 +3,7 @@
 namespace otus
 {
     template <typename T>
-    class CustomUCustomUniquePtrniqPtr
+    class CustomUniquePtr
     {
     private:
         T *t = nullptr;
@@ -21,7 +21,7 @@ namespace otus
         CustomUniquePtr<T> &operator=(const CustomUniquePtr<T> &ptr) = delete;
         CustomUniquePtr<T> &operator=(CustomUniquePtr<T> &&ptr) noexcept
         {
-            if (*(this) == nullptr)
+            if (*(this) == ptr)
             {
                 return *this;
             }
