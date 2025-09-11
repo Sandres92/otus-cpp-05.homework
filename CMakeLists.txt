@@ -9,7 +9,7 @@ option(WITH_BOOST_TEST "Whether to build Boost test" ON)
 
 configure_file(version.h.in version.h)
 
-add_executable(editor_cli editor.cpp)
+add_executable(editor_cli editor.cpp CustomUniquePtr.h CustomUniquePtr)
 add_library(editor lib.cpp)
 
 set_target_properties(editor_cli editor PROPERTIES

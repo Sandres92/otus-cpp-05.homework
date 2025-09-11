@@ -1,4 +1,6 @@
 #include <iostream>
+#include "CustomUniquePtr.h"
+#include "CustomSharedPtr.h"
 
 using namespace std;
 
