@@ -24,10 +24,16 @@ target_sources(editor_cli PRIVATE
     GraphicPrimitives/Circle.cpp
     GraphicPrimitives/Square.cpp
     Observe/Observable.cpp 
+    Exporter/CustomFileIExporter.cpp
+    Importer/CustomFileImporter.cpp
+    Importer/TestIimporter.cpp
+    
 )
 target_include_directories(editor_cli PRIVATE
     ${CMAKE_CURRENT_SOURCE_DIR}/GraphicPrimitives
     ${CMAKE_CURRENT_SOURCE_DIR}/Observe
+    ${CMAKE_CURRENT_SOURCE_DIR}/Exporter
+    ${CMAKE_CURRENT_SOURCE_DIR}/Importer
 )
 
 set_target_properties(editor_cli editor PROPERTIES
