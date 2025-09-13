@@ -41,13 +41,5 @@ namespace otus
         {
             return t;
         }
-        T &operator*() const
-        {
-            return *t;
-        }
-        T *operator->() const
-        {
-            return t;
-        }
     };
 }

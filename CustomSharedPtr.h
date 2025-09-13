@@ -72,5 +72,10 @@ namespace otus
                 delete counter;
             }
         }
+
+        T *get() const
+        {
+            return t;
+        }
     };
 } // namespace otus
