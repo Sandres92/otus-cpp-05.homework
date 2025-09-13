@@ -4,8 +4,23 @@ namespace otus
 {
     CanvasController::CanvasController(const CustomSharedPtr<ICanvasModel> &canvasModel, const CustomSharedPtr<ICanvasView> &canvasView) : canvasModel(canvasModel), canvasView(canvasView)
     {
-        CreateCircle();
-        CreateSquare();
+        CreateGraphicPrimitive(GraphicPrimitiveType::Circle);
+        CreateGraphicPrimitive(GraphicPrimitiveType::Square);
+    }
+
+    void CanvasController::CreateGraphicPrimitive(GraphicPrimitiveType primitiveType)
+    {
+        switch (primitiveType)
+        {
+        case GraphicPrimitiveType::Circle:
+            CreateCircle();
+            break;
+        case GraphicPrimitiveType::Square:
+            CreateSquare();
+            break;
+        default:
+            break;
+        }
     }
 
     void CanvasController::CreateCircle()

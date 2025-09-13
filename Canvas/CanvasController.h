@@ -5,9 +5,9 @@
 
 #include "../GraphicPrimitives/Circle.h"
 #include "../GraphicPrimitives/Square.h"
+#include "../GraphicPrimitives/GraphicPrimitiveType.h"
 
 #include <iostream>
-
 namespace otus
 {
     class CanvasController
@@ -23,7 +23,7 @@ namespace otus
         CanvasController(const CustomSharedPtr<ICanvasModel> &canvasModel, const CustomSharedPtr<ICanvasView> &canvasView);
         ~CanvasController() = default;
 
-        void CreateGraphicPrimitive();
+        void CreateGraphicPrimitive(GraphicPrimitiveType primitiveType);
     };
 
 }
