@@ -2,7 +2,7 @@
 
 namespace otus
 {
-    Square::Square(int posX, int posY, int sideLengths) : GraphicPrimitive(posX, posY, sideLengths, sideLengths)
+    Square::Square(int posX, int posY, int sideLengths) : GraphicPrimitive("Square", posX, posY, sideLengths, sideLengths)
     {
     }
 

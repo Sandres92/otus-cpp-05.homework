@@ -2,7 +2,7 @@
 
 namespace otus
 {
-    Circle::Circle(int posX, int posY, int radius) : GraphicPrimitive(posX, posY, radius, radius)
+    Circle::Circle(int posX, int posY, int radius) : GraphicPrimitive("Circle", posX, posY, radius, radius)
     {
     }
 

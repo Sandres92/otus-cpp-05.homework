@@ -7,6 +7,6 @@ namespace otus
         IObserver() = default;
         virtual ~IObserver() = default;
 
-        virtual void update() = 0;
+        virtual void Update() = 0;
     };
 }

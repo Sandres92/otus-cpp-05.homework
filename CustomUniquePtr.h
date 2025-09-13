@@ -1,3 +1,4 @@
+#pragma once
 #include <algorithm>
 #include <utility>
 
@@ -10,6 +11,10 @@ namespace otus
         T *t = nullptr;
 
     public:
+        CustomUniquePtr() : t(nullptr)
+        {
+        }
+
         CustomUniquePtr(T *t) : t(t)
         {
         }
@@ -26,7 +31,10 @@ namespace otus
                 return *this;
             }
 
-            delete t;
+            if (t)
+            {
+                delete t;
+            }
 
             t = std::exchange(ptr.t, nullptr);
             return *this;
@@ -34,7 +42,10 @@ namespace otus
 
         ~CustomUniquePtr()
         {
-            delete t;
+            if (t)
+            {
+                delete t;
+            }
         }
 
         T *get() const

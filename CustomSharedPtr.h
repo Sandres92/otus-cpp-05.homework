@@ -1,4 +1,4 @@
-
+#pragma once
 #include <algorithm>
 #include <utility>
 
@@ -12,12 +12,16 @@ namespace otus
 
         struct Counter
         {
-            int count = 0;
+            int count = 1;
         };
 
-        Counter *counter{0};
+        Counter *counter{1};
 
     public:
+        CustomSharedPtr() : t(nullptr), counter(new Counter())
+        {
+        }
+
         CustomSharedPtr(T *t) : t(t), counter(new Counter())
         {
         }
@@ -40,7 +44,7 @@ namespace otus
 
             t = ptr.t;
             counter = ptr.counter;
-            ++(counter->count);
+            ++counter->count;
             return *(this);
         }
 
@@ -53,7 +57,11 @@ namespace otus
 
             if (counter && --counter->count == 0)
             {
-                delete t;
+                if (t)
+                {
+                    delete t;
+                }
+
                 delete counter;
             }
 
@@ -65,10 +73,12 @@ namespace otus
 
         ~CustomSharedPtr()
         {
-            --counter->count;
-            if (counter->count == 0)
+            if (counter && --counter->count == 0)
             {
-                delete t;
+                if (t)
+                {
+                    delete t;
+                }
                 delete counter;
             }
         }

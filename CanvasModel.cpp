@@ -3,20 +3,15 @@
 
 namespace otus
 {
-    CanvasModel::CanvasModel()
-    {
-    }
-    CanvasModel::~CanvasModel()
-    {
-    }
-
     void CanvasModel::AddPrimitive(GraphicPrimitive *graphicPrimitive)
     {
         CustomUniquePtr<GraphicPrimitive> g(graphicPrimitive);
         graphicPrimitives.push_back(std::move(g));
+
+        NotifyUpdate();
     }
 
-    void CanvasModel::RemovePrimitive(const GraphicPrimitive const *graphicPrimitive)
+    void CanvasModel::RemovePrimitive(const GraphicPrimitive *graphicPrimitive)
     {
         for (auto it = graphicPrimitives.begin(); it != graphicPrimitives.end(); ++it)
         {
@@ -26,23 +21,12 @@ namespace otus
                 break;
             }
         }
+
+        NotifyUpdate();
     }
 
-    void CanvasModel::ChoosePrimitive(const GraphicPrimitive const *graphicPrimitive = nullptr)
+    const std::vector<CustomUniquePtr<GraphicPrimitive>> &CanvasModel::GetAllGraphicPrimitive() const
     {
-        if (graphicPrimitive == nullptr)
-        {
-            choosePrimitive = -1;
-            return;
-        }
-
-        for (size_t i = 0; i != graphicPrimitives.size(); ++i)
-        {
-            if (graphicPrimitives[i].get() == graphicPrimitive)
-            {
-                choosePrimitive = i;
-                break;
-            }
-        }
+        return graphicPrimitives;
     }
 }

@@ -1,19 +1,23 @@
-#include <vector>
+#pragma once
+
+#include <string>
 
 namespace otus
 {
     class GraphicPrimitive
     {
     protected:
+        std::string name;
         int posX;
         int posY;
         int wigth;
         int height;
 
     public:
-        GraphicPrimitive(int posX, int posY, int wigth, int height);
-        ~GraphicPrimitive();
+        GraphicPrimitive(std::string name, int posX, int posY, int wigth, int height);
+        virtual ~GraphicPrimitive() = default;
 
+        std::string GetName() const;
         int GetPosX() const;
         int GetPosY() const;
         int GetWigth() const;

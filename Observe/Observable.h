@@ -1,18 +1,19 @@
+#pragma once
+
 #include <vector>
 #include "IObserver.h"
 #include "IObservable.h"
-#include "../CustomUniquePtr.h"
+#include "../CustomSharedPtr.h"
 
 namespace otus
 {
-    class Observable : IObservable
+    class Observable : public IObservable
     {
     private:
-        std::vector<CustomUniquePtr<IObserver>> observers;
+        std::vector<IObserver *> observers;
 
     public:
         void AddObserver(IObserver *observer) override;
-
         void RemoveObserver(IObserver *observer) override;
 
         void NotifyUpdate() const override;

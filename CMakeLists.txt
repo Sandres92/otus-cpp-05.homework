@@ -9,7 +9,8 @@ option(WITH_BOOST_TEST "Whether to build Boost test" ON)
 
 configure_file(version.h.in version.h)
 
-add_executable(editor_cli main.cpp CustomUniquePtr.h CustomSharedPtr.h)
+add_executable(editor_cli main.cpp CustomUniquePtr.h CustomSharedPtr.h CanvasModel.cpp CanvasView.cpp CanvasController)
+
 add_library(editor lib.cpp)
 
 target_sources(editor_cli PRIVATE

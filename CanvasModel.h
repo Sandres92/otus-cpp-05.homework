@@ -1,21 +1,24 @@
+#pragma once
+
 #include <vector>
 #include "CustomUniquePtr.h"
 #include "GraphicPrimitive.h"
+#include "../Observe/Observable.h"
 
 namespace otus
 {
-    class CanvasModel
+    class CanvasModel : public Observable
     {
     private:
         std::vector<CustomUniquePtr<GraphicPrimitive>> graphicPrimitives;
         int choosePrimitive = -1;
 
     public:
-        CanvasModel();
-        ~CanvasModel();
+        CanvasModel() = default;
+        ~CanvasModel() = default;
 
         void AddPrimitive(GraphicPrimitive *graphicPrimitive);
-        void RemovePrimitive(const GraphicPrimitive const *graphicPrimitive);
-        void ChoosePrimitive(const GraphicPrimitive const *graphicPrimitive = nullptr);
+        void RemovePrimitive(const GraphicPrimitive *graphicPrimitive);
+        const std::vector<CustomUniquePtr<GraphicPrimitive>> &GetAllGraphicPrimitive() const;
     };
 }

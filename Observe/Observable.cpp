@@ -4,15 +4,14 @@ namespace otus
 {
     void Observable::AddObserver(IObserver *observer)
     {
-        CustomUniquePtr<IObserver> o(observer);
-        observers.push_back(std::move(o));
+        observers.push_back(observer);
     }
 
     void Observable::RemoveObserver(IObserver *observer)
     {
         for (auto it = observers.begin(); it != observers.end(); ++it)
         {
-            if ((*it).get() == observer)
+            if (*it == observer)
             {
                 observers.erase(it);
                 break;
@@ -24,7 +23,7 @@ namespace otus
     {
         for (auto it = observers.begin(); it != observers.end(); ++it)
         {
-            (*it).get()->update();
+            (*it)->Update();
         }
     }
 }

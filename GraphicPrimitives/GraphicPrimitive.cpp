@@ -2,12 +2,13 @@
 
 namespace otus
 {
-    GraphicPrimitive::GraphicPrimitive(int posX, int posY, int wigth, int height) : posX(posX), posY(posY), wigth(wigth), height(height)
+    GraphicPrimitive::GraphicPrimitive(std::string name, int posX, int posY, int wigth, int height) : name(name), posX(posX), posY(posY), wigth(wigth), height(height)
     {
     }
 
-    GraphicPrimitive::~GraphicPrimitive()
+    std::string GraphicPrimitive::GetName() const
     {
+        return name;
     }
 
     int GraphicPrimitive::GetPosX() const
