@@ -1,13 +1,14 @@
 #pragma once
 
 #include <vector>
-#include "CustomUniquePtr.h"
+#include "../CustomUniquePtr.h"
 #include "GraphicPrimitive.h"
 #include "../Observe/Observable.h"
+#include "../Canvas/ICanvasModel.h"
 
 namespace otus
 {
-    class CanvasModel : public Observable
+    class CanvasModel : public ICanvasModel
     {
     private:
         std::vector<CustomUniquePtr<GraphicPrimitive>> graphicPrimitives;

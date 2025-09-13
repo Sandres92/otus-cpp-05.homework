@@ -2,7 +2,7 @@
 
 namespace otus
 {
-    void CustomFileIExporter::Export(const CustomSharedPtr<CanvasModel> &canvasModel)
+    void CustomFileIExporter::Export(const CustomSharedPtr<ICanvasModel> &canvasModel)
     {
         canvasModel.get()->GetAllGraphicPrimitive();
     }

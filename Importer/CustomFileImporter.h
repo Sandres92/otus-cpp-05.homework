@@ -1,13 +1,13 @@
 #include <string>
 
 #include "IIimporter.h"
-#include "../CanvasModel.h"
+#include "../Canvas/ICanvasModel.h"
 
 namespace otus
 {
     class CustomFileImporter : public IIimporter
     {
     public:
-        CanvasModel &Import(const std::string &fileName) override;
+        ICanvasModel &Import(const std::string &fileName) override;
     };
 }

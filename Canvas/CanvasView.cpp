@@ -3,7 +3,7 @@
 
 namespace otus
 {
-    CanvasView::CanvasView(const CustomSharedPtr<CanvasModel> &canvasModel) : canvasModel(canvasModel)
+    CanvasView::CanvasView(const CustomSharedPtr<ICanvasModel> &canvasModel) : canvasModel(canvasModel)
     {
         canvasModel.get()->AddObserver(this);
     }

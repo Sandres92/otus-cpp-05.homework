@@ -2,9 +2,11 @@
 #include "CustomUniquePtr.h"
 #include "CustomSharedPtr.h"
 
-#include "CanvasModel.h"
-#include "CanvasController.h"
-#include "CanvasView.h"
+#include "Canvas/ICanvasModel.h"
+#include "Canvas/CanvasModel.h"
+#include "Canvas/CanvasController.h"
+#include "Canvas/CanvasView.h"
+#include "Canvas/ICanvasView.h"
 #include <memory>
 
 using namespace std;
@@ -19,9 +21,8 @@ using namespace std;
  */
 int main()
 {
-    std::unique_ptr<int> m;
-    otus::CustomSharedPtr<otus::CanvasModel> canvasModel(new otus::CanvasModel());
-    otus::CustomSharedPtr<otus::CanvasView> canvasView(new otus::CanvasView(canvasModel));
+    otus::CustomSharedPtr<otus::ICanvasModel> canvasModel(new otus::CanvasModel());
+    otus::CustomSharedPtr<otus::ICanvasView> canvasView(new otus::CanvasView(canvasModel));
     otus::CanvasController canvasController(canvasModel, canvasView);
 
     return 0;

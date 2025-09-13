@@ -12,9 +12,6 @@ configure_file(version.h.in version.h)
 add_executable(editor_cli main.cpp 
     CustomUniquePtr.h 
     CustomSharedPtr.h 
-    CanvasModel.cpp 
-    CanvasView.cpp 
-    CanvasController.cpp
 )
 
 add_library(editor lib.cpp)
@@ -27,6 +24,9 @@ target_sources(editor_cli PRIVATE
     Exporter/CustomFileIExporter.cpp
     Importer/CustomFileImporter.cpp
     Importer/TestIimporter.cpp
+    Canvas/CanvasModel.cpp 
+    Canvas/CanvasView.cpp 
+    Canvas/CanvasController.cpp
     
 )
 target_include_directories(editor_cli PRIVATE
@@ -34,6 +34,7 @@ target_include_directories(editor_cli PRIVATE
     ${CMAKE_CURRENT_SOURCE_DIR}/Observe
     ${CMAKE_CURRENT_SOURCE_DIR}/Exporter
     ${CMAKE_CURRENT_SOURCE_DIR}/Importer
+    ${CMAKE_CURRENT_SOURCE_DIR}/Canvas
 )
 
 set_target_properties(editor_cli editor PROPERTIES

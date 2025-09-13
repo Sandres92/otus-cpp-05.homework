@@ -2,14 +2,10 @@
 
 namespace otus
 {
-    CanvasController::CanvasController(const CustomSharedPtr<CanvasModel> &canvasModel, const CustomSharedPtr<CanvasView> &canvasView) : canvasModel(canvasModel), canvasView(canvasView)
+    CanvasController::CanvasController(const CustomSharedPtr<ICanvasModel> &canvasModel, const CustomSharedPtr<ICanvasView> &canvasView) : canvasModel(canvasModel), canvasView(canvasView)
     {
         CreateCircle();
         CreateSquare();
-    }
-
-    void CanvasController::CreateGraphicPrimitive()
-    {
     }
 
     void CanvasController::CreateCircle()

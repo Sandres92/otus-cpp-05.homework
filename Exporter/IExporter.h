@@ -1,5 +1,5 @@
 #include <string>
-#include "../CanvasModel.h"
+#include "../Canvas/ICanvasModel.h"
 #include "../CustomSharedPtr.h"
 
 namespace otus
@@ -7,6 +7,6 @@ namespace otus
     class IExporter
     {
     public:
-        virtual void Export(const CustomSharedPtr<CanvasModel> &canvasModel) = 0;
+        virtual void Export(const CustomSharedPtr<ICanvasModel> &canvasModel) = 0;
     };
 }

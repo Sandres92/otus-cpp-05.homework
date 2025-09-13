@@ -2,12 +2,12 @@
 
 namespace otus
 {
-    CanvasModel &TestIimporter::Import(const std::string &fileName)
+    ICanvasModel &TestIimporter::Import(const std::string &fileName)
     {
         if (fileName.empty())
         {
         }
-        CanvasModel *canvasModel = new CanvasModel();
+        ICanvasModel *canvasModel = new CanvasModel();
         return *canvasModel;
     }
 }

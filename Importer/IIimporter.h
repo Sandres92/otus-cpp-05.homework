@@ -1,4 +1,4 @@
-#include "../CanvasModel.h"
+#include "../Canvas/CanvasModel.h"
 #include <string>
 
 namespace otus
@@ -6,6 +6,6 @@ namespace otus
     class IIimporter
     {
     public:
-        virtual CanvasModel &Import(const std::string &fileName) = 0;
+        virtual ICanvasModel &Import(const std::string &fileName) = 0;
     };
 }
