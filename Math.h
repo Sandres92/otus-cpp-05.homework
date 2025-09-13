@@ -11,7 +11,7 @@ namespace otus
         template <typename T>
         static constexpr inline T Pow2(T t)
         {
-            static_assert(otus::IsArithmetic<T>, "T must be arithmetic");
+            static_assert(otus::IsArithmetic<T>::value, "T must be arithmetic");
             return t * t;
         }
     };

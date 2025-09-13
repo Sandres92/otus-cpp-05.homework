@@ -9,8 +9,19 @@ option(WITH_BOOST_TEST "Whether to build Boost test" ON)
 
 configure_file(version.h.in version.h)
 
-add_executable(editor_cli main.cpp CustomUniquePtr.h CustomUniquePtr)
+add_executable(editor_cli main.cpp CustomUniquePtr.h CustomSharedPtr.h)
 add_library(editor lib.cpp)
+
+target_sources(editor_cli PRIVATE
+    GraphicPrimitives/GraphicPrimitive.cpp
+    GraphicPrimitives/Circle.cpp
+    GraphicPrimitives/Square.cpp
+    Observe/Observable.cpp 
+)
+target_include_directories(editor_cli PRIVATE
+    ${CMAKE_CURRENT_SOURCE_DIR}/GraphicPrimitives
+    ${CMAKE_CURRENT_SOURCE_DIR}/Observe
+)
 
 set_target_properties(editor_cli editor PROPERTIES
     CXX_STANDARD 17
