@@ -3,12 +3,20 @@
 
 namespace otus
 {
+    CanvasModel::CanvasModel() : observable(CustomUniquePtr<IObservable>(new Observable()))
+    {
+    }
+    CanvasModel::~CanvasModel()
+    {
+        observable.get()->RemoveAllObserver();
+    }
+
     void CanvasModel::AddPrimitive(GraphicPrimitive *graphicPrimitive)
     {
         CustomUniquePtr<GraphicPrimitive> g(graphicPrimitive);
         graphicPrimitives.push_back(std::move(g));
 
-        NotifyUpdate();
+        observable.get()->NotifyUpdate();
     }
 
     void CanvasModel::RemovePrimitive(const GraphicPrimitive *graphicPrimitive)
@@ -22,11 +30,16 @@ namespace otus
             }
         }
 
-        NotifyUpdate();
+        observable.get()->NotifyUpdate();
     }
 
     const std::vector<CustomUniquePtr<GraphicPrimitive>> &CanvasModel::GetAllGraphicPrimitive() const
     {
         return graphicPrimitives;
+    }
+
+    void CanvasModel::AddObserver(IObserver *observer)
+    {
+        observable.get()->AddObserver(observer);
     }
 }

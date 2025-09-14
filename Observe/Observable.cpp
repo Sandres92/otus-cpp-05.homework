@@ -4,19 +4,21 @@ namespace otus
 {
     void Observable::AddObserver(IObserver *observer)
     {
-        observers.push_back(observer);
+        if (std::find(observers.begin(), observers.end(), observer) == observers.end())
+        {
+            observers.push_back(observer);
+        }
     }
 
     void Observable::RemoveObserver(IObserver *observer)
     {
-        for (auto it = observers.begin(); it != observers.end(); ++it)
-        {
-            if (*it == observer)
-            {
-                observers.erase(it);
-                break;
-            }
-        }
+        auto it = std::remove(observers.begin(), observers.end(), observer);
+        observers.erase(it, observers.end());
+    }
+
+    void Observable::RemoveAllObserver()
+    {
+        observers.clear();
     }
 
     void Observable::NotifyUpdate() const

@@ -1,6 +1,8 @@
 #pragma once
 
 #include <vector>
+#include <algorithm>
+
 #include "IObserver.h"
 #include "IObservable.h"
 #include "../CustomSharedPtr.h"
@@ -15,6 +17,7 @@ namespace otus
     public:
         void AddObserver(IObserver *observer) override;
         void RemoveObserver(IObserver *observer) override;
+        void RemoveAllObserver() override;
 
         void NotifyUpdate() const override;
     };

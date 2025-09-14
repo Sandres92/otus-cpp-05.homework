@@ -14,12 +14,15 @@ namespace otus
         std::vector<CustomUniquePtr<GraphicPrimitive>> graphicPrimitives;
         int choosePrimitive = -1;
 
+        CustomUniquePtr<IObservable> observable;
+
     public:
-        CanvasModel() = default;
-        ~CanvasModel() = default;
+        CanvasModel();
+        ~CanvasModel();
 
         void AddPrimitive(GraphicPrimitive *graphicPrimitive);
         void RemovePrimitive(const GraphicPrimitive *graphicPrimitive);
         const std::vector<CustomUniquePtr<GraphicPrimitive>> &GetAllGraphicPrimitive() const;
+        void AddObserver(IObserver *observer) override;
     };
 }

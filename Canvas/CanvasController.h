@@ -24,6 +24,7 @@ namespace otus
         ~CanvasController() = default;
 
         void CreateGraphicPrimitive(GraphicPrimitiveType primitiveType);
+        void Reset();
     };
 
 }

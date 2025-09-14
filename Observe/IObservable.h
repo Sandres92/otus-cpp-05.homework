@@ -11,6 +11,7 @@ namespace otus
         virtual ~IObservable() = default;
         virtual void AddObserver(IObserver *observer) = 0;
         virtual void RemoveObserver(IObserver *observer) = 0;
+        virtual void RemoveAllObserver() = 0;
 
         virtual void NotifyUpdate() const = 0;
     };

@@ -34,4 +34,10 @@ namespace otus
         otus::Square *square = new Square(10, 10, 3);
         canvasModel.get()->AddPrimitive(square);
     }
+
+    void CanvasController::Reset()
+    {
+        canvasView.Reset();
+        canvasModel.Reset();
+    }
 }

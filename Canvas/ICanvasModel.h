@@ -10,7 +10,7 @@
 
 namespace otus
 {
-    class ICanvasModel : public Observable
+    class ICanvasModel
     {
     public:
         ICanvasModel() = default;
@@ -19,5 +19,7 @@ namespace otus
         virtual void AddPrimitive(GraphicPrimitive *graphicPrimitive) = 0;
         virtual void RemovePrimitive(const GraphicPrimitive *graphicPrimitive) = 0;
         virtual const std::vector<CustomUniquePtr<GraphicPrimitive>> &GetAllGraphicPrimitive() const = 0;
+
+        virtual void AddObserver(IObserver *observer) = 0;
     };
 }
