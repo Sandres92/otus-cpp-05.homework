@@ -5,6 +5,7 @@
 #include "../CustomUniquePtr.h"
 #include "../CustomSharedPtr.h"
 #include "ICanvasView.h"
+#include <functional>
 
 namespace otus
 {
@@ -13,10 +14,12 @@ namespace otus
     private:
         CustomSharedPtr<ICanvasModel> canvasModel;
         char startSymbol = 33; // "!"
+        std::function<void(const std::vector<CustomUniquePtr<GraphicPrimitive>> &)> allCanvasCallback;
 
     public:
         CanvasView(const CustomSharedPtr<ICanvasModel> &canvasModel);
-        ~CanvasView() = default;
+        ~CanvasView();
         void Update() override;
+        void Update2(const std::vector<CustomUniquePtr<GraphicPrimitive>> &canvasModel) override;
     };
 }

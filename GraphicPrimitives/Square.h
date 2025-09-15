@@ -6,7 +6,7 @@ namespace otus
     {
     private:
     public:
-        Square(int posX, int posY, int sideLengths);
+        explicit Square(int posX, int posY, int sideLengths);
         ~Square();
 
         double GetArea() const override;

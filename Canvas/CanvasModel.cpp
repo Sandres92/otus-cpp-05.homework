@@ -5,6 +5,7 @@ namespace otus
 {
     CanvasModel::CanvasModel() : observable(CustomUniquePtr<IObservable>(new Observable()))
     {
+        ++countCreation;
     }
     CanvasModel::~CanvasModel()
     {

@@ -29,21 +29,6 @@ namespace otus
         }
         void AddFunction(const Callback &cb)
         {
-            // bool isContains = false;
-            // for (sizt_t i = 0; i != v.size(); ++i)
-            //{
-            //     if (v[i] == f)
-            //     {
-            //         isContains = true;
-            //         break;
-            //     }
-            // }
-            //
-            // if (!isContains)
-            //{
-            //    v.push_back(f);
-            //}
-
             if (std::find(callbacks.begin(), callbacks.end(), cb) == callbacks.end())
             {
                 callbacks.push_back(cb);
@@ -51,15 +36,6 @@ namespace otus
         }
         void RemoveFunction(const Callback &cb)
         {
-            // for (sizt_t i = 0; i != v.size(); ++i)
-            //{
-            //     if (v[i] == f)
-            //     {
-            //         v.erase(f);
-            //         break;
-            //     }
-            // }
-
             auto ne = std::remove(callbacks.begin(), callbacks.end(), cb);
             callbacks.erase(ne, callbacks.end());
         }

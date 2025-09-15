@@ -11,5 +11,6 @@ namespace otus
     {
     public:
         virtual ~ICanvasView() = default;
+        virtual void Update2(const std::vector<CustomUniquePtr<GraphicPrimitive>> &canvasModel);
     };
 }

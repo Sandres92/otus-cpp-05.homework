@@ -23,6 +23,8 @@ namespace otus
         {
             if (counter && --counter->count == 0)
             {
+                // std::cout << "~Destroyed!! " << typeid(this).name() << " count " << counter->count << "\n";
+
                 if (t)
                 {
                     delete t;
@@ -42,10 +44,10 @@ namespace otus
 
         CustomSharedPtr<T>(const CustomSharedPtr<T> &ptr) : t(ptr.t), counter(ptr.counter)
         {
-            if (counter)
-            {
-                std::cout << "CustomSharedPtr<T>  " << typeid(this).name() << " count " << counter->count << "\n";
-            }
+            // if (counter)
+            //{
+            //     std::cout << "CustomSharedPtr<T>  " << typeid(this).name() << " count " << counter->count << "\n";
+            // }
             ++counter->count;
         }
 
@@ -55,10 +57,10 @@ namespace otus
 
         CustomSharedPtr<T> &operator=(const CustomSharedPtr<T> &ptr)
         {
-            if (counter)
-            {
-                std::cout << "CustomSharedPtr operator " << typeid(this).name() << " count " << counter->count << "\n";
-            }
+            // if (counter)
+            //{
+            //     //std::cout << "CustomSharedPtr operator " << typeid(this).name() << " count " << counter->count << "\n";
+            // }
 
             if (this == &ptr)
             {
@@ -89,10 +91,10 @@ namespace otus
 
         ~CustomSharedPtr()
         {
-            if (counter)
-            {
-                std::cout << "~CustomSharedPtr " << typeid(this).name() << " count " << counter->count << "\n";
-            }
+            // if (counter)
+            //{
+            //     std::cout << "~CustomSharedPtr " << typeid(this).name() << " count " << counter->count << "\n";
+            // }
 
             decrement();
         }
@@ -102,6 +104,11 @@ namespace otus
             decrement();
             this->t = t;
             counter = t ? new Counter() : nullptr;
+        }
+
+        int use_count() const
+        {
+            return counter ? counter->count : 0;
         }
 
         T *get() const

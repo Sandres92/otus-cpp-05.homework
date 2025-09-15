@@ -14,7 +14,7 @@ namespace otus
         int height;
 
     public:
-        GraphicPrimitive(std::string name, int posX, int posY, int wigth, int height);
+        explicit GraphicPrimitive(std::string name, int posX, int posY, int wigth, int height);
         virtual ~GraphicPrimitive() = default;
 
         std::string GetName() const;

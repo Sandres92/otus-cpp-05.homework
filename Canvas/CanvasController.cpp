@@ -37,7 +37,7 @@ namespace otus
 
     void CanvasController::Reset()
     {
-        canvasView.Reset();
-        canvasModel.Reset();
+        canvasView = nullptr;
+        canvasModel = nullptr;
     }
 }

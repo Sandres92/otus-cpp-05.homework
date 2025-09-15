@@ -24,5 +24,6 @@ namespace otus
         void RemovePrimitive(const GraphicPrimitive *graphicPrimitive);
         const std::vector<CustomUniquePtr<GraphicPrimitive>> &GetAllGraphicPrimitive() const;
         void AddObserver(IObserver *observer) override;
+        inline static int countCreation = 0;
     };
 }
