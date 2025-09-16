@@ -7,7 +7,7 @@ namespace otus
     {
     private:
     public:
-        Circle(int posX, int posY, int radius);
+        explicit Circle(int posX, int posY, int radius);
         ~Circle();
 
         double GetArea() const override;

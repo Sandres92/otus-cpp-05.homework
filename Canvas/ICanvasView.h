@@ -7,10 +7,10 @@
 
 namespace otus
 {
-    class ICanvasView : public IObserver
+    class ICanvasView
     {
     public:
         virtual ~ICanvasView() = default;
-        virtual void Update2(const std::vector<CustomUniquePtr<GraphicPrimitive>> &canvasModel);
+        virtual void Update2(const std::vector<CustomUniquePtr<GraphicPrimitive>> &canvasModel) = 0;
     };
 }

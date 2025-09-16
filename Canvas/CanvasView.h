@@ -15,11 +15,11 @@ namespace otus
         CustomSharedPtr<ICanvasModel> canvasModel;
         char startSymbol = 33; // "!"
         std::function<void(const std::vector<CustomUniquePtr<GraphicPrimitive>> &)> allCanvasCallback;
+        uint64_t allCanvasCallbackId = 0;
 
     public:
         CanvasView(const CustomSharedPtr<ICanvasModel> &canvasModel);
         ~CanvasView();
-        void Update() override;
         void Update2(const std::vector<CustomUniquePtr<GraphicPrimitive>> &canvasModel) override;
     };
 }

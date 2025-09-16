@@ -1,6 +1,9 @@
+#pragma once
+
 #include <vector>
 #include <functional>
 #include <algorithm>
+#include <cstdint>
 
 namespace otus
 {
@@ -9,35 +12,36 @@ namespace otus
     {
     private:
         using Callback = std::function<void(T)>;
-        std::vector<Callback> callbacks;
+        uint64_t id = 0;
+        std::vector<std::pair<uint64_t, Callback>> callbacks;
 
     public:
         void Invoke()
         {
-            for (const auto &callback : callbacks)
+            for (auto &[id, callback] : callbacks)
             {
                 callback();
             }
         }
 
-        void Invoke(T t)
+        void Invoke(const T &t)
         {
-            for (const auto &callback : callbacks)
+            for (auto &[id, callback] : callbacks)
             {
                 callback(t);
             }
         }
-        void AddFunction(const Callback &cb)
+        uint64_t AddFunction(const Callback &cb)
         {
-            if (std::find(callbacks.begin(), callbacks.end(), cb) == callbacks.end())
-            {
-                callbacks.push_back(cb);
-            }
+            ++id;
+            callbacks.push_back(std::make_pair(id, cb));
+            return id;
         }
-        void RemoveFunction(const Callback &cb)
+        void RemoveFunction(uint64_t id)
         {
-            auto ne = std::remove(callbacks.begin(), callbacks.end(), cb);
-            callbacks.erase(ne, callbacks.end());
+            auto it = std::remove_if(callbacks.begin(), callbacks.end(), [id](const auto &p)
+                                     { return p.first == id; });
+            callbacks.erase(it, callbacks.end());
         }
         void RemoveAll()
         {
