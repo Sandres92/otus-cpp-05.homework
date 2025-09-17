@@ -9,20 +9,23 @@
 
 namespace otus
 {
-    class CanvasView : public ICanvasView
+    class MockCanvasView : public ICanvasView
     {
     private:
         CustomSharedPtr<ICanvasModel> canvasModel;
-        char startSymbol = 33; // "!"
         std::function<void(const std::vector<CustomUniquePtr<GraphicPrimitive>> &)> allCanvasCallback;
         uint64_t allCanvasCallbackId = 0;
+
+        int updateCount = 0;
 
     protected:
         void Update2(const std::vector<CustomUniquePtr<GraphicPrimitive>> &canvasModel) override;
 
     public:
-        CanvasView(const CustomSharedPtr<ICanvasModel> &canvasModel);
-        ~CanvasView();
+        MockCanvasView(const CustomSharedPtr<ICanvasModel> &canvasModel);
+        ~MockCanvasView();
         void SetCanvasModel(const CustomSharedPtr<ICanvasModel> &canvasModel) override;
+
+        int GetUpdateCount() const;
     };
 }

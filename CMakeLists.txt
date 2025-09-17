@@ -26,15 +26,16 @@ target_sources(editor_cli PRIVATE
     Importer/TestIimporter.cpp
     Canvas/CanvasModel.cpp 
     Canvas/CanvasView.cpp 
-    Canvas/CanvasController.cpp
-    
+    Canvas/CanvasController.cpp    
 )
+
 target_include_directories(editor_cli PRIVATE
     ${CMAKE_CURRENT_SOURCE_DIR}/GraphicPrimitives
     ${CMAKE_CURRENT_SOURCE_DIR}/Observe
     ${CMAKE_CURRENT_SOURCE_DIR}/Exporter
     ${CMAKE_CURRENT_SOURCE_DIR}/Importer
     ${CMAKE_CURRENT_SOURCE_DIR}/Canvas
+    ${CMAKE_CURRENT_SOURCE_DIR}/Action
 )
 
 set_target_properties(editor_cli editor PROPERTIES
@@ -52,7 +53,31 @@ target_link_libraries(editor_cli PRIVATE
 
 if(WITH_BOOST_TEST)
     find_package(Boost COMPONENTS unit_test_framework REQUIRED)
-    add_executable(test_editor test_editor.cpp)
+    add_executable(test_editor test_editor.cpp 
+    )
+
+    target_sources(test_editor PRIVATE
+        GraphicPrimitives/GraphicPrimitive.cpp
+        GraphicPrimitives/Circle.cpp
+        GraphicPrimitives/Square.cpp
+        Observe/Observable.cpp 
+        Exporter/CustomFileIExporter.cpp
+        Importer/CustomFileImporter.cpp
+        Importer/TestIimporter.cpp
+        Canvas/CanvasModel.cpp 
+        Canvas/CanvasView.cpp 
+        Canvas/CanvasController.cpp   
+        Canvas/MockCanvasView.cpp 
+    )
+
+    target_include_directories(test_editor PRIVATE
+        ${CMAKE_CURRENT_SOURCE_DIR}/GraphicPrimitives
+        ${CMAKE_CURRENT_SOURCE_DIR}/Observe
+        ${CMAKE_CURRENT_SOURCE_DIR}/Exporter
+        ${CMAKE_CURRENT_SOURCE_DIR}/Importer
+        ${CMAKE_CURRENT_SOURCE_DIR}/Canvas
+        ${CMAKE_CURRENT_SOURCE_DIR}/Action
+    )
 
     set_target_properties(test_editor PROPERTIES
         CXX_STANDARD 17

@@ -2,7 +2,7 @@
 
 #include <vector>
 #include "../CustomUniquePtr.h"
-#include "GraphicPrimitive.h"
+#include "../GraphicPrimitives/GraphicPrimitive.h"
 #include "../Observe/Observable.h"
 #include "../Canvas/ICanvasModel.h"
 #include "../Action/Action.h"

@@ -1,4 +1,6 @@
 
+#pragma once
+
 namespace otus
 {
     template <bool conditional, typename T>

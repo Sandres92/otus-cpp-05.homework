@@ -1,3 +1,5 @@
+#pragma once
+
 #include "GraphicPrimitive.h"
 #include "../Math.h"
 
