@@ -8,6 +8,9 @@ namespace otus
     class CustomFileImporter : public IIimporter
     {
     public:
-        ICanvasModel &Import(const std::string &fileName) override;
+        CustomFileImporter() = default;
+        ~CustomFileImporter() = default;
+
+        ICanvasModel *Import(const std::string &fileName) override;
     };
 }

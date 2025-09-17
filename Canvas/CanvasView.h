@@ -21,5 +21,6 @@ namespace otus
         CanvasView(const CustomSharedPtr<ICanvasModel> &canvasModel);
         ~CanvasView();
         void Update2(const std::vector<CustomUniquePtr<GraphicPrimitive>> &canvasModel) override;
+        void SetCanvasModel(const CustomSharedPtr<ICanvasModel> &canvasModel) override;
     };
 }

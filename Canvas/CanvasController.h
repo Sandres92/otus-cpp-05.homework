@@ -23,8 +23,12 @@ namespace otus
         CanvasController(const CustomSharedPtr<ICanvasModel> &canvasModel, const CustomSharedPtr<ICanvasView> &canvasView);
         ~CanvasController() = default;
 
+        void SetCanvasModel(const CustomSharedPtr<ICanvasModel> &canvasModel);
+        void SetCanvasView(const CustomSharedPtr<ICanvasView> &canvasModel);
+        void SetCanvasModelAndView(const CustomSharedPtr<ICanvasModel> &canvasModel,
+                                   const CustomSharedPtr<ICanvasView> &canvasView);
+
         void CreateGraphicPrimitive(GraphicPrimitiveType primitiveType);
         void Reset();
     };
-
 }

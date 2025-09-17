@@ -27,5 +27,6 @@ namespace otus
         virtual void AddObserver(IObserver *observer) = 0;
         virtual uint64_t AddObserver2(std::function<void(ActionParam)> callback) = 0;
         virtual void RemoveObserver2(uint64_t id) = 0;
+        virtual void Notify() = 0;
     };
 }

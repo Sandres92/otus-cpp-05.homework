@@ -1,3 +1,5 @@
+#pragma once
+
 namespace otus
 {
     enum class GraphicPrimitiveType

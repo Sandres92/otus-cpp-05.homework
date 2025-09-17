@@ -9,7 +9,16 @@
 #include "Canvas/CanvasController.h"
 #include "Canvas/CanvasView.h"
 #include "Canvas/ICanvasView.h"
+
 #include "Action/Action.h"
+
+#include "Exporter/IExporter.h"
+#include "Exporter/CustomFileIExporter.h"
+
+#include "Importer/IIimporter.h"
+#include "Importer/CustomFileImporter.h"
+
+#include "GraphicPrimitives/GraphicPrimitiveType.h"
 
 using namespace std;
 
@@ -44,6 +53,16 @@ int main()
     canvasModel = otus::CustomSharedPtr<otus::ICanvasModel>(new otus::CanvasModel());
     canvasView = otus::CustomSharedPtr<otus::ICanvasView>(new otus::CanvasView(canvasModel));
     canvasController = otus::CanvasController(canvasModel, canvasView);
+
+    otus::CustomUniquePtr<otus::IExporter> exporter(new otus::CustomFileIExporter());
+    exporter.get()->Export(canvasModel);
+
+    otus::CustomUniquePtr<otus::IIimporter> importer(new otus::CustomFileImporter());
+    otus::CanvasModel *importCanvasModel = dynamic_cast<otus::CanvasModel *>(importer.get()->Import("Test"));
+    canvasModel = otus::CustomSharedPtr<otus::ICanvasModel>(importCanvasModel);
+    canvasView.get()->SetCanvasModel(canvasModel);
+    canvasController.SetCanvasModel(canvasModel);
+    canvasController.CreateGraphicPrimitive(otus::GraphicPrimitiveType::Square);
 
     return 0;
 }

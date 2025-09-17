@@ -8,6 +8,9 @@ namespace otus
     class TestIimporter : public IIimporter
     {
     public:
-        ICanvasModel &Import(const std::string &fileName) override;
+        TestIimporter() = default;
+        ~TestIimporter() = default;
+
+        ICanvasModel *Import(const std::string &fileName) override;
     };
 }

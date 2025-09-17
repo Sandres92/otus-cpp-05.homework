@@ -23,6 +23,27 @@ namespace otus
         }
     }
 
+    void CanvasController::SetCanvasModel(const CustomSharedPtr<ICanvasModel> &canvasModel)
+    {
+        (*this).canvasModel = canvasModel;
+        (*this).canvasModel.get()->Notify();
+    }
+
+    void CanvasController::SetCanvasView(const CustomSharedPtr<ICanvasView> &canvasView)
+    {
+        (*this).canvasView = canvasView;
+
+        (*this).canvasModel.get()->Notify();
+    }
+
+    void CanvasController::SetCanvasModelAndView(const CustomSharedPtr<ICanvasModel> &canvasModel,
+                                                 const CustomSharedPtr<ICanvasView> &canvasView)
+    {
+        (*this).canvasModel = canvasModel;
+        (*this).canvasView = canvasView;
+        (*this).canvasModel.get()->Notify();
+    }
+
     void CanvasController::CreateCircle()
     {
         otus::Circle *circle = new Circle(5, 5, 3);
