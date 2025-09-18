@@ -1,0 +1,12 @@
+<map id="Canvas" name="Canvas">
+<area shape="rect" id="node1" href="dir_fb664dd925af09dad91a6d9c41ab6e8c.html" title="Canvas" alt="" coords="140,5,211,31"/>
+<area shape="rect" id="node2" href="dir_6fd29061b404b5bcc7204f1655e82d2f.html" title="Observe" alt="" coords="5,79,81,104"/>
+<area shape="poly" id="edge1" href="dir_000005_000022.html" alt="" coords="155,33,78,74,76,70,153,28"/>
+<area shape="rect" id="edge1-headlabel" href="dir_000005_000022.html" title="2" alt="" coords="80,70,90,85"/>
+<area shape="rect" id="node3" href="dir_ad1d7d7eb63bf0ad9fdb153ec1f29eb3.html" title="GraphicPrimitives" alt="" coords="106,79,245,104"/>
+<area shape="poly" id="edge2" href="dir_000005_000016.html" alt="" coords="178,31,178,65,173,65,173,31"/>
+<area shape="rect" id="edge2-headlabel" href="dir_000005_000016.html" title="5" alt="" coords="179,53,188,68"/>
+<area shape="rect" id="node4" href="dir_cbeb2d67bd657875e65e08b576dc8007.html" title="Action" alt="" coords="269,79,332,104"/>
+<area shape="poly" id="edge3" href="dir_000005_000001.html" alt="" coords="197,28,270,69,267,74,194,33"/>
+<area shape="rect" id="edge3-headlabel" href="dir_000005_000001.html" title="2" alt="" coords="264,55,273,70"/>
+</map>

@@ -1,0 +1,7 @@
+<map id="otus::IIimporter" name="otus::IIimporter">
+<area shape="rect" id="Node000001" title="Class (Interface) importer." alt="" coords="132,5,255,31"/>
+<area shape="rect" id="Node000002" href="$classotus_1_1CustomFileImporter.html" title="Class (Interface) importer from custom format file." alt="" coords="5,79,192,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="169,41,116,81,113,76,166,37"/>
+<area shape="rect" id="Node000003" href="$classotus_1_1TestIimporter.html" title="Class (Interface) test importer." alt="" coords="216,79,360,104"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="221,37,274,76,271,81,218,41"/>
+</map>

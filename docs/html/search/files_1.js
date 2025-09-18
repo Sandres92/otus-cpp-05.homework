@@ -1,5 +1,25 @@
 var searchData=
 [
-  ['editor_2ecpp_0',['editor.cpp',['../editor_8cpp.html',1,'']]],
-  ['editor_2ecpp_2eo_2ed_1',['editor.cpp.o.d',['../editor_8cpp_8o_8d.html',1,'']]]
+  ['canvascontroller_2ecpp_0',['CanvasController.cpp',['../CanvasController_8cpp.html',1,'']]],
+  ['canvascontroller_2ecpp_2eo_2ed_1',['canvascontroller.cpp.o.d',['../editor__cli_8dir_2Canvas_2CanvasController_8cpp_8o_8d.html',1,'(Global Namespace)'],['../editor__cli_8dir_2CanvasController_8cpp_8o_8d.html',1,'(Global Namespace)'],['../test__editor_8dir_2Canvas_2CanvasController_8cpp_8o_8d.html',1,'(Global Namespace)']]],
+  ['canvascontroller_2eh_2',['CanvasController.h',['../CanvasController_8h.html',1,'']]],
+  ['canvasmodel_2ecpp_3',['CanvasModel.cpp',['../CanvasModel_8cpp.html',1,'']]],
+  ['canvasmodel_2ecpp_2eo_2ed_4',['canvasmodel.cpp.o.d',['../editor__cli_8dir_2Canvas_2CanvasModel_8cpp_8o_8d.html',1,'(Global Namespace)'],['../editor__cli_8dir_2CanvasModel_8cpp_8o_8d.html',1,'(Global Namespace)'],['../test__editor_8dir_2Canvas_2CanvasModel_8cpp_8o_8d.html',1,'(Global Namespace)']]],
+  ['canvasmodel_2eh_5',['CanvasModel.h',['../CanvasModel_8h.html',1,'']]],
+  ['canvasview_2ecpp_6',['CanvasView.cpp',['../CanvasView_8cpp.html',1,'']]],
+  ['canvasview_2ecpp_2eo_2ed_7',['canvasview.cpp.o.d',['../test__editor_8dir_2Canvas_2CanvasView_8cpp_8o_8d.html',1,'(Global Namespace)'],['../editor__cli_8dir_2CanvasView_8cpp_8o_8d.html',1,'(Global Namespace)'],['../editor__cli_8dir_2Canvas_2CanvasView_8cpp_8o_8d.html',1,'(Global Namespace)']]],
+  ['canvasview_2eh_8',['CanvasView.h',['../CanvasView_8h.html',1,'']]],
+  ['circle_2ecpp_9',['Circle.cpp',['../Circle_8cpp.html',1,'']]],
+  ['circle_2ecpp_2eo_2ed_10',['circle.cpp.o.d',['../editor__cli_8dir_2GraphicPrimitives_2Circle_8cpp_8o_8d.html',1,'(Global Namespace)'],['../test__editor_8dir_2GraphicPrimitives_2Circle_8cpp_8o_8d.html',1,'(Global Namespace)']]],
+  ['circle_2eh_11',['Circle.h',['../Circle_8h.html',1,'']]],
+  ['cmakeccompilerid_2ec_12',['CMakeCCompilerId.c',['../CMakeCCompilerId_8c.html',1,'']]],
+  ['cmakecxxcompilerid_2ecpp_13',['CMakeCXXCompilerId.cpp',['../CMakeCXXCompilerId_8cpp.html',1,'']]],
+  ['customfileiexporter_2ecpp_14',['CustomFileIExporter.cpp',['../CustomFileIExporter_8cpp.html',1,'']]],
+  ['customfileiexporter_2ecpp_2eo_2ed_15',['customfileiexporter.cpp.o.d',['../test__editor_8dir_2Exporter_2CustomFileIExporter_8cpp_8o_8d.html',1,'(Global Namespace)'],['../editor__cli_8dir_2Exporter_2CustomFileIExporter_8cpp_8o_8d.html',1,'(Global Namespace)']]],
+  ['customfileiexporter_2eh_16',['CustomFileIExporter.h',['../CustomFileIExporter_8h.html',1,'']]],
+  ['customfileimporter_2ecpp_17',['CustomFileImporter.cpp',['../CustomFileImporter_8cpp.html',1,'']]],
+  ['customfileimporter_2ecpp_2eo_2ed_18',['customfileimporter.cpp.o.d',['../editor__cli_8dir_2Importer_2CustomFileImporter_8cpp_8o_8d.html',1,'(Global Namespace)'],['../test__editor_8dir_2Importer_2CustomFileImporter_8cpp_8o_8d.html',1,'(Global Namespace)']]],
+  ['customfileimporter_2eh_19',['CustomFileImporter.h',['../CustomFileImporter_8h.html',1,'']]],
+  ['customsharedptr_2eh_20',['CustomSharedPtr.h',['../CustomSharedPtr_8h.html',1,'']]],
+  ['customuniqueptr_2eh_21',['CustomUniquePtr.h',['../CustomUniquePtr_8h.html',1,'']]]
 ];

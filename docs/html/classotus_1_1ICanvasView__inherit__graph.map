@@ -1,0 +1,7 @@
+<map id="otus::ICanvasView" name="otus::ICanvasView">
+<area shape="rect" id="Node000001" title="Class (Interface) Canvas View." alt="" coords="93,5,235,31"/>
+<area shape="rect" id="Node000002" href="$classotus_1_1CanvasView.html" title="Class canvas view, which draw canvas and graphic primitives." alt="" coords="5,79,144,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="141,41,91,81,88,76,137,37"/>
+<area shape="rect" id="Node000003" href="$classotus_1_1MockCanvasView.html" title="Test canvas view calss." alt="" coords="168,79,341,104"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="191,37,241,76,238,81,188,41"/>
+</map>

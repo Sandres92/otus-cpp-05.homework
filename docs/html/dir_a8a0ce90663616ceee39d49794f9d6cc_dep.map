@@ -1,4 +1,9 @@
 <map id="build/CMakeFiles/editor_cli.dir" name="build/CMakeFiles/editor_cli.dir">
-<area shape="rect" id="node1" href="dir_a8a0ce90663616ceee39d49794f9d6cc.html" title="editor_cli.dir" alt="" coords="27,52,130,77"/>
-<area shape="rect" id="clust1" href="dir_63772b626f2709090f0bdca0f40827b4.html" title="CMakeFiles" alt="" coords="16,16,141,88"/>
+<area shape="rect" id="node2" href="dir_ab3db6d72da6253220ea4baae1f6c757.html" title="Canvas" alt="" coords="506,63,577,88"/>
+<area shape="rect" id="node3" href="dir_479f6c816d6df23d1f9c39168b48e781.html" title="Exporter" alt="" coords="404,63,481,88"/>
+<area shape="rect" id="node4" href="dir_5bdf4442105402969bc68f93fb432d7e.html" title="GraphicPrimitives" alt="" coords="241,63,380,88"/>
+<area shape="rect" id="node5" href="dir_2d9034f95e644639fc8fc7fe4877331f.html" title="Importer" alt="" coords="138,63,217,88"/>
+<area shape="rect" id="node6" href="dir_187d9361124a4e035f76d2ea4d5f7a7f.html" title="Observe" alt="" coords="38,63,114,88"/>
+<area shape="rect" id="clust2" href="dir_a8a0ce90663616ceee39d49794f9d6cc.html" alt="" coords="27,52,715,99"/>
+<area shape="rect" id="clust1" href="dir_63772b626f2709090f0bdca0f40827b4.html" title="CMakeFiles" alt="" coords="16,16,725,109"/>
 </map>

@@ -1,0 +1,7 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="Node000000" href="$classotus_1_1ICanvasView.html" title="Class (Interface) Canvas View." alt="" coords="5,31,148,56"/>
+<area shape="rect" id="Node000001" href="$classotus_1_1CanvasView.html" title="Class canvas view, which draw canvas and graphic primitives." alt="" coords="213,5,352,31"/>
+<area shape="poly" id="edge4_Node000000_Node000001" title=" " alt="" coords="162,30,213,24,214,29,162,36"/>
+<area shape="rect" id="Node000002" href="$classotus_1_1MockCanvasView.html" title="Test canvas view calss." alt="" coords="196,55,369,80"/>
+<area shape="poly" id="edge5_Node000000_Node000002" title=" " alt="" coords="162,51,196,55,196,60,162,56"/>
+</map>

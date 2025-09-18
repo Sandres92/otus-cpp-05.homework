@@ -1,0 +1,7 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="Node000000" href="$classotus_1_1GraphicPrimitive.html" title="Graphic primitive class." alt="" coords="5,31,172,56"/>
+<area shape="rect" id="Node000001" href="$classotus_1_1Circle.html" title="Circle primitive: square." alt="" coords="224,5,319,31"/>
+<area shape="poly" id="edge1_Node000000_Node000001" title=" " alt="" coords="185,27,224,22,224,27,186,33"/>
+<area shape="rect" id="Node000002" href="$classotus_1_1Square.html" title="Graphic primitive: square." alt="" coords="220,55,323,80"/>
+<area shape="poly" id="edge2_Node000000_Node000002" title=" " alt="" coords="186,53,220,58,220,63,185,59"/>
+</map>

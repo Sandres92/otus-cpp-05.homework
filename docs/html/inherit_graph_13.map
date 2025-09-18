@@ -1,0 +1,7 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="Node000000" href="$classotus_1_1IIimporter.html" title="Class (Interface) importer." alt="" coords="5,31,128,56"/>
+<area shape="rect" id="Node000001" href="$classotus_1_1CustomFileImporter.html" title="Class (Interface) importer from custom format file." alt="" coords="176,5,363,31"/>
+<area shape="poly" id="edge7_Node000000_Node000001" title=" " alt="" coords="141,31,176,27,176,32,142,37"/>
+<area shape="rect" id="Node000002" href="$classotus_1_1TestIimporter.html" title="Class (Interface) test importer." alt="" coords="197,55,341,80"/>
+<area shape="poly" id="edge8_Node000000_Node000002" title=" " alt="" coords="142,50,197,56,197,61,141,55"/>
+</map>
