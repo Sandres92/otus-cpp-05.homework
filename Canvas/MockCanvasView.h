@@ -9,6 +9,10 @@
 
 namespace otus
 {
+    /**
+     * @brief Test canvas view calss.
+     *
+     */
     class MockCanvasView : public ICanvasView
     {
     private:

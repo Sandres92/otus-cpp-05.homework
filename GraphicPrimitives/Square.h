@@ -4,6 +4,10 @@
 
 namespace otus
 {
+    /**
+     * @brief Graphic primitive: square
+     *
+     */
     class Square : public GraphicPrimitive
     {
     private:

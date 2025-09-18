@@ -5,6 +5,10 @@
 
 namespace otus
 {
+    /**
+     * @brief Circle primitive: square
+     *
+     */
     class Circle : public GraphicPrimitive
     {
     private:

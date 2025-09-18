@@ -5,6 +5,10 @@
 
 namespace otus
 {
+    /**
+     * @brief Class (Interface) test importer
+     *
+     */
     class TestIimporter : public IIimporter
     {
     public:

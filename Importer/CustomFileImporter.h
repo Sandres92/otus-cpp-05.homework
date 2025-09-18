@@ -5,6 +5,10 @@
 
 namespace otus
 {
+    /**
+     * @brief Class (Interface) importer from custom format file
+     *
+     */
     class CustomFileImporter : public IIimporter
     {
     public:

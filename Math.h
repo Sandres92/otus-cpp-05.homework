@@ -5,11 +5,21 @@
 
 namespace otus
 {
+    /**
+     * @brief Custom math library
+     *
+     */
     class Math
     {
     public:
         static constexpr double PI = 3.141592653589793;
 
+        /**
+         * @brief Calculating the square of a number
+         *
+         * @param <in> Number with type T. type of number: int, double, float etc.
+         *
+         */
         template <typename T>
         static constexpr inline T Pow2(T t)
         {

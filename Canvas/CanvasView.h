@@ -9,6 +9,10 @@
 
 namespace otus
 {
+    /**
+     * @brief Class canvas view, which draw canvas and graphic primitives.
+     *
+     */
     class CanvasView : public ICanvasView
     {
     private:

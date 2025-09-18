@@ -5,6 +5,10 @@
 
 namespace otus
 {
+    /**
+     * @brief Class (Interface) exporter in custom format of file
+     *
+     */
     class CustomFileIExporter : public IExporter
     {
     public:

@@ -3,6 +3,13 @@
 
 namespace otus
 {
+    /**
+     * @brief Sfinae functions
+     *
+     * This .h file contains some functions, to
+     * detect contains functions that check whether the incoming type is a digit.
+     *
+     */
     template <bool conditional, typename T>
     struct EnableIf;
 
@@ -12,6 +19,11 @@ namespace otus
         using type = T;
     };
 
+    /**
+     * @brief If type not belongs to type bellow, in means type is not digit
+     *
+     *
+     */
     template <typename T>
     struct IsArithmetic
     {

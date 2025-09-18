@@ -9,6 +9,10 @@
 
 namespace otus
 {
+    /**
+     * @brief Class canvas, which contains data of graphic editor.
+     *
+     */
     class CanvasModel : public ICanvasModel
     {
     private:
